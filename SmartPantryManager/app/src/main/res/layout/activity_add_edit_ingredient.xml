@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://android.com"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Wrapper for Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_ingredient_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingredient Name (e.g., Tomatoes)" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Wrapper for Quantity -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_input_qty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_ingredient_qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Quantity (e.g., 500)" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Wrapper for Unit -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_input_unit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:errorEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_ingredient_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Measurement Unit (e.g., g, pcs)" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Wrapper for Expiry (Does not need a layout wrapper in Java) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_ingredient_expiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:hint="Expiry Date (YYYY-MM-DD) - Optional" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_save_ingredient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Ingredient Inventory" />
+</LinearLayout>
